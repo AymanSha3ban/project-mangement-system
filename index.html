@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <title>PRODUCT MANAGEMENT SYSTEM</title>
+</head>
+<body>
+  
+  <div class="crud">
+    <div class="title">
+      <h1>CRUDS</h1>
+      <p>PRODUCT MANAGEMENT SYSTEM</p>
+    </div>
+
+
+    <div class="inputs">
+      <input type="text" id="title" placeholder="title">
+      <div class="price">
+        <input onkeyup="calcTotal()" type="number" id="price" placeholder="price">
+        <input onkeyup="calcTotal()" type="number" id="taxes" placeholder="taxes">
+        <input onkeyup="calcTotal()" type="number" id="ads" placeholder="ads">
+        <input onkeyup="calcTotal()" type="number" id="discount" placeholder="discount">
+        <small id="total"></small>
+      </div>
+      <input type="number" id="count" placeholder="count">
+      <input type="text" id="category" placeholder="category">
+      <button id="create" onclick="createProduct ()">Create</button> 
+    </div>
+
+
+    <div class="outputs">
+      <input type="text" id="search" placeholder="Search" onkeyup="search(this.value)">
+      <div class="searchbtn">
+        <button onclick="changeSearchbox(this.id)" id="searchTitle">Search By Title</button>
+        <button onclick="changeSearchbox(this.id)" id="searchCategory">Search By Category</button>
+      </div>
+
+      <div class="deleteAll"></div>
+
+      <table>
+        <caption>📦 Product List</caption>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>TOTAL</th>
+            <th>CATEGORY</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- full from javascript -->
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
